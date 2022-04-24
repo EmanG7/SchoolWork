@@ -5,4 +5,5 @@ def main(): #declares method
     for i in range(power-1): #repeats second number input to multiply results by the first number 
         results *= num #multiplying results by first input number
     print(results) #prints results
+    input("Press Enter to continue...")
 main() #runs method
