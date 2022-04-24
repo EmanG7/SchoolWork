@@ -8,4 +8,5 @@ def main():
         ans = input("Do you want to try again? (Y/N): ")
         if (ans != "Y"):
             break
+    input("Press Enter to continue...")
 main()
