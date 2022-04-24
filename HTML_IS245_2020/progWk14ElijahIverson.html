@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- 
+			AUTHOR:		Elijah Iverson
+			DATE:		05/02/2020
+			PURPOSE:	Button increases count by 7 every press
+		-->
+		<meta charset="UTF-8" />
+		<title>Increment by Seven</title>
+        
+        <script>
+		
+		var counter = 0;
+		
+		function myCounter()
+		{
+			document.getElementById("theCounter").innerHTML = counter;		
+		}
+		
+		function sevenIncrement()
+		{
+			counter+=7;
+		}
+		
+		</script>
+	</head>
+   
+	<body onload = "myCounter()">
+		<div>
+		
+			<button onclick = "sevenIncrement(); myCounter()">Increment By 7</button>
+			
+			<p>Count = <span id = "theCounter"></span></p>
+	
+		</div>	
+	</body>
+</html>

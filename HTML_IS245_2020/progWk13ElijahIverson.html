@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- 
+			AUTHOR:		Elijah Iverson
+			DATE:		04/25/2020
+			PURPOSE:	to reverse user input in the output
+		-->
+		<meta charset="UTF-8" />
+		<title>Week 13 Program</title>
+        
+        <script>
+		
+			//User input
+			var input = window.prompt("Enter a sentence");
+			
+			//executes rest of program is input doesn't null
+			if(input != null){
+			
+				//Split input into an array
+				var array = input.split(" ");
+				
+				//Output array in reverse order
+				for(var i = array.length-1; i>=0; i--){
+						
+						//Writes array backswards in document
+						document.writeln("<p>"+array[i]+"</p>");
+				}
+				
+			}
+            
+		</script>
+	</head>
+   
+	<body>
+		
+	</body>
+</html>

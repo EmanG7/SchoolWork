@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- AUTHOR:	Elijah Iverson
+		     DATE:		03/22/2020
+			 PURPOSE:	Calculate employee pay
+		-->
+		<meta charset = "utf-8">
+		<title>Gross Pay Calculator</title>
+		
+		<script>
+			
+			// Declare variables
+			var firstName;
+			var lastName;
+			var hours;
+			var hourlyWage;
+			var overTime;
+			var grossPay;
+			var MAX_HOURS = 40;
+			
+			// Get input from user
+			firstName = window.prompt( "Enter employee first name:" );
+			lastName = window.prompt( "Enter employee last name:" );
+			hours = window.prompt( "Hours worked:" );
+			hourlyWage = window.prompt( "Pay rate:" );
+			
+			// Calculate number of overtime hours (use if..else selection statement)
+			if (hours > MAX_HOURS)
+			{
+				overTime = hours - MAX_HOURS;
+			}
+			else
+			{
+				overTime = 0;
+			}
+
+			// Calculate pay (gross and net)
+			grossPay = 0;
+			grossPay += (hourlyWage * (hours - overTime));
+			if (overTime > 0)
+			{
+				grossPay += ((hourlyWage * 1.5) * overTime);
+			}
+
+			// Output employee pay messages (use embedded html headings)
+			document.writeln( "<h1>Gross pay for " + firstName + " " + lastName + " is $" + grossPay + "</h1>" );
+			document.writeln( "<h4>Total hours worked: " + hours + "</h4>" );
+			document.writeln( "<h4>Overtime hours worked: " + overTime + "</h4>" );
+			document.writeln( "<h4> Pay rate per hour: $" + hourlyWage + "</h4>" );
+
+		</script>
+	</head>
+     
+	<body>
+		<!-- This program contains NO html code -->
+	</body>
+</html>

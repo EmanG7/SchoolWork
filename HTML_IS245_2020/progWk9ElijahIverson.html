@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- AUTHOR:	Elijah Iverson
+			 DATE:		03/27/2020
+			 PURPOSE:	Calculates Average Age
+		-->
+		<meta charset="UTF-8" />
+		<title>Age Average</title>
+		
+		<script>
+			// Declare variables
+				var input;
+				var counterOne;
+				var counterTwo;
+				var counterThree;
+				var inputCounter;
+				var averageOne;
+				var averageTwo;
+				var averageThree;
+			
+			// Initialize variables requiring an initial value
+				counterOne = 0;
+				counterTwo = 0;
+				counterThree = 0;
+				averageOne = 0;
+				averageTwo = 0;
+				averageThree = 0;
+			
+			// Get intitial input from user for counter-controlled loop
+				input = window.prompt("Enter number of ages in Group 1:");
+				
+				inputCounter = parseInt(input);
+			
+			// Counter-controlled loop for Group 1 average age calculation
+				while(counterOne < inputCounter)
+				{
+					
+					input = window.prompt("Enter an age:");
+					
+					averageOne += parseInt(input);
+					
+					counterOne += 1;
+					
+				}
+			
+			// Sentinel-controlled loop for Group 2 average age calculation
+				do
+				{
+				
+				input = window.prompt("Enter a Group 2 member age, -1 to QUIT:");
+				
+				input = parseInt(input);
+				
+				if(input != -1)
+				{
+				averageTwo += input;
+				
+				counterTwo += 1;
+				}
+				
+				}while(input != -1);
+			
+			// for Repetition Statement for Group 3 average age calculation
+				input = window.prompt("Enter number of ages in Group 3:");
+				
+				inputCounter = parseInt(input);
+			
+				for(var i = 0; i < inputCounter; i++)
+				{
+					input = window.prompt("Enter a Group 3 member age:");
+					
+					averageThree += parseInt(input);
+					
+					counterThree += 1;
+				}
+			
+			// Calculate averages statement (3 needed)
+				averageOne /= counterOne;
+				
+				averageTwo /= counterTwo;
+				
+				averageThree /= counterThree;
+			
+			// Display output
+				document.writeln("<h1>Group Age Averages</h1>");
+				document.writeln("<h5>Group one age average is: " + averageOne + "</h5>");
+				document.writeln("<h5>Group two age average is: " + averageTwo + "</h5>");
+				document.writeln("<h5>Group three age average is: " + averageThree + "</h5>");
+			
+		</script>
+	</head>
+	
+	<body>	
+		<!-- This program contains no html code in this area -->
+	</body>
+</html>
+
+

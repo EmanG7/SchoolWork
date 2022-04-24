@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- 
+			AUTHOR:		Elijah Iverson
+			DATE:		04/04/2020
+			PURPOSE:	Uses a method to tell if a number is odd or even.
+		-->
+		<meta charset="UTF-8" />
+		<title>Odd or Even</title>
+        
+        <script>
+		
+			//Heading
+			document.writeln( "<h1>Odd/Even Output</h1>" );
+		
+			//sentinel-controlled loop
+			do{
+		
+				//variable input takes user's input from a window prompt for an integer.
+				var input = window.prompt( "Enter an integer (click Cancel to terminate)" );
+			
+				//uses the method below and stores it in the variable number.
+				var results = isOdd(input);
+			
+				//Output in HTML if its not null
+				if(input!=null)
+					document.writeln( "<h3>" + input + " is " + results + "</h3>" );
+			
+			//end of sentinel-controlled loop condition
+			}while(input!=null);
+			
+			//method to find if num is an odd or even number.
+			function isOdd(num)
+			{
+				//changes the number into a remainder of 1 (one) being odd or 0 (zero) being even.
+				num %= 2;
+				
+				//returns odd if its 1 (one) or even if its 0 (zero).
+				if(num==1)
+					return "odd";
+				else
+					return "even";
+			}
+		
+		</script>
+	</head>
+   
+	<body>
+		
+	</body>
+</html>

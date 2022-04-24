@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- AUTHOR:	Elijah Iverson 
+			 DATE:		04/18/2020
+			 PURPOSE:	Removing Duplicated numbers entered by user
+		-->
+		<meta charset="UTF-8" />
+		<title>Remove Duplicates</title>
+		
+		<script>
+			
+			//user entered number for counter loop
+			var numEntry = parseInt(window.prompt("How many numbers will be entered (max is 20)?"));
+			
+			//initializing
+			var array = new Array(numEntry);
+			
+			//counter loop for numbers to be entered
+			for(var i = 0; i < numEntry; i++){
+			
+				//user entry of numbers
+				array[i] = parseInt(window.prompt("Enter number between 10 and 100:"));
+				
+			}
+			//using function to remove duplicates in array
+			array = RemoveDuplicates(array);
+			
+			//function that removes duplicates
+			function RemoveDuplicates(data){
+			
+				//searches loop for duplicates
+				for(var i = 0; i < data.length; i++){
+						
+						//skips over duplicates already removed
+						if(data[i] != null)
+							for(var j = i+1; j < data.length; j++){
+					
+								//removing duplicates
+								if(data[i] == data[j])
+									data[j] = null;
+							}
+				}
+				//returns array with no duplicates
+				return data;
+			}
+			
+			//Output
+			document.writeln("<h1>Remove Duplicates</h1>");
+			
+			document.writeln("<textarea rows=\"3\" cols=\"40\">Count of items entered: " + numEntry);
+			
+			document.write("Numbers-duplicates removed: ");
+			
+			//Array Output
+			for(var i = 0; i < array.length; i++){
+			if(array[i]!=null)
+				document.write(array[i]+" ");
+			}
+			
+			document.write("</textarea>");
+			
+		</script>
+	</head>
+	
+	<body>	
+		
+	</body>
+</html>
+
+

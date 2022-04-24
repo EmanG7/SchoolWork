@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<!-- 
+			AUTHOR:		Elijah Iverson	
+		    DATE:		02/15/2020
+			PURPOSE:	To represent Program: Week 4
+		-->
+		<meta charset = "utf-8">
+		
+		<title>PROGRAM: Week 4</title>
+		
+		<!--The correct CSS table border-->
+		<style>
+		table,th,td{
+			border: 1px solid black;
+		}
+		</style>
+		
+	</head>
+	
+	<body>
+		<h1>PROGRAM: Week 4</h1> 	<!--the top heading-->
+		
+		<!--description of the program above horizontal rule-->
+		<p>This program will demonstrate the use of nested lists, tables, and forms</p>
+		
+		<hr>
+		
+		<!--Second heading-->
+		<h2>Attendance Form</h2>
+		
+		<p>Please fill out this form to register your attendance.</p>
+		
+		<!--Form with autocomplete-->
+		<form method = "post" autocomplete = "on">
+			
+			<!--First Name input-->
+			<p><label>First Name:
+				<input type = "text" id = "firstName"
+					placeholder ="First name" /> (First name)
+				</label></p>
+			
+			<!--Last Name input-->
+			<p><label>Last Name:
+				<input type = "text" id = "lastName"
+					placeholder ="Last name" /> (Last name)
+				</label></p>
+			
+			<!--Email input-->
+			<p><label>Email:
+				<input type = "email" id = "email"
+					placeholder ="name@domain.com" /> (name@domain.com)
+				</label></p>
+				
+			<!--Day input with datalist-->
+			<p><label for = "txtList">Day:
+				<input type = "text" id = "txtList"
+					placeholder = "Enter day of week" list = "days" />
+				<datalist id = "days">
+					<option value = "Sunday">
+					<option value = "Monday">
+					<option value = "Tuesday">
+					<option value = "Wednesday">
+					<option value = "Thursday">
+					<option value = "Friday">
+					<option value = "Saturday">
+				</datalist>
+			</label></p>
+			
+			<!--Submit & Clear inputs-->
+			<p><input type = "submit" value = "Submit" />
+				<input type = "reset" value = "Clear" /></p>
+		</form>
+		
+		<!--Horizontal Rule-->
+		<hr>
+		
+		<!--Third heading-->
+		<h2>Daily Menu Entree Choices</h2>
+		
+		<!--Ordered lists inside an unordered list-->
+		<ul>
+			<li>Monday</li>
+			<li>
+				<ol>
+					<li>Sweet & Sour Pork</li>
+					<li>Oven Fried Chicken</li>
+				</ol>
+			</li>
+			<li>Tuesday</li>
+			<li>
+				<ol>
+					<li>Beef Tips with Mushrooms</li>
+					<li>Orange Glazed Chicken </li>
+				</ol>
+			</li>
+			<li>Wednesday</li>
+			<li>
+				<ol>
+					<li>Beef Teriyaki</li>
+					<li>Chicken Pot Pie</li>
+				</ol>
+			</li>
+			<li>Thursday</li>
+			<li>
+				<ol>
+					<li>Chili Con Carne</li>
+					<li>Shepards Pie</li>
+				</ol>
+			</li>
+			<li>Friday</li>
+			<li>
+				<ol>
+					<li>Baked Filet of Sole</li>
+					<li>Cheesy Beef Stuffed Shells</li>
+				</ol>
+			</li>
+		</ul>
+		
+		<!--Horizontal Rule-->
+		<hr>
+		
+		<!--Fourth heading-->
+		<h2>Daily Work Schedule</h2>
+		
+		<!--Table of seven rows and three columns-->
+		<table>
+			<!--Table head-->
+			<thead>
+				<tr>
+					<th>Day</th>
+					<th>Worker</th>
+					<th>Time</th>
+				</tr>
+			</thead>
+		
+			<!--Table body-->
+			<tbody>
+				<tr>
+					<td>Monday</td>
+					<td>Pat</td>
+					<td>9:00-2:00</td>
+				</tr>
+				<tr>
+					<td>Tuesday</td>
+					<td>Bob</td>
+					<td>3:00-11:30</td>
+				</tr>
+				<tr>
+					<td>Wednesday</td>
+					<td>Tiffany</td>
+					<td>5:30-9:00</td>
+				</tr>
+				<tr>
+					<td>Thursday</td>
+					<td>James</td>
+					<td>8:00-12:00</td>
+				</tr>
+				<tr>
+					<td>Friday</td>
+					<td>Jean</td>
+					<td>1:00-6:00</td>
+				</tr>
+			</tbody>
+			
+			<!--Table footer-->
+			<tfoot>
+				<tr>
+					<th>TOTAL</th>
+					<th>5 Workers</th>
+					<th>5 Time Blocks</th>
+				</tr>
+			</tfoot>
+		
+		</table>
+		
+	</body>
+	
+</html>
