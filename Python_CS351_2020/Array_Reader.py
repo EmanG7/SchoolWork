@@ -9,4 +9,5 @@ def main(): #declares method
             evensum+=i #adds evens to evensum
     print("Odds:",oddsum) #prints oddsum
     print("Evens:", evensum) #prints evensum
+    input("Press Enter to continue...")
 main() #run method
