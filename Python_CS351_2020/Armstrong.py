@@ -8,4 +8,5 @@ def main():
         if(total == x):
             results.append(x)
     print(results)
+    input("Press Enter to continue...")
 main()
